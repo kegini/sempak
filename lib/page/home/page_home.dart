@@ -9,9 +9,15 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
+////////////////////////////////////////////////////////
+/// State
+////////////////////////////////////////////////////////
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    ////////////////////////////////////////////////////
+    /// Katagori Section
+    ////////////////////////////////////////////////////
     Widget katagoriSection = Container(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -27,28 +33,14 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
     );
-
+    ////////////////////////////////////////////////////
+    /// Katagori Section
+    ////////////////////////////////////////////////////
     Widget hasilSection = Container();
 
-    Widget tombolSection = Container(
-      child: new Row /*or Column*/ (
-        mainAxisAlignment: MainAxisAlignment.center,
-        mainAxisSize: MainAxisSize.max,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          FlatButton(
-            child: Card(
-                margin: EdgeInsets.all(8),
-                child: Container(
-                  margin: EdgeInsets.all(8),
-                  child: Text("Etdah"),
-                )),
-            onPressed: () {},
-          )
-        ],
-      ),
-    );
-
+    ////////////////////////////////////////////////////
+    /// Scaffold
+    ////////////////////////////////////////////////////
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -60,11 +52,49 @@ class _MyHomePageState extends State<MyHomePage> {
         children: <Widget>[
           katagoriSection,
           hasilSection,
-          tombolSection,
         ],
+      ),
+      bottomNavigationBar: new BottomAppBar(
+        shape: CircularNotchedRectangle(),
+        color: Colors.green,
+        child: new Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            IconButton(
+              icon: Icon(Icons.add_circle),
+              color: Colors.white,
+              onPressed: () {
+                tambah();
+              },
+            ),
+            Text(
+              "Kesempatan 10/10",
+              style: TextStyle(color: Colors.white),
+            )
+          ],
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.touch_app),
+        backgroundColor: Colors.green,
+        foregroundColor: Colors.white,
+        onPressed: () {
+          acak();
+        },
       ),
     );
   }
 
-  void buttonPressed() {}
+  //////////////////////////////////////////////////////
+  /// Bisnis Logic
+  //////////////////////////////////////////////////////
+  void acak() {
+    print("Lakukan Acak");
+  }
+
+  void tambah() {
+    print("Lakukan Tambah");
+  }
 }

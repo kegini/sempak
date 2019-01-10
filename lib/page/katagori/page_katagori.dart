@@ -10,7 +10,6 @@ class PageKatagori extends StatefulWidget {
 }
 
 class _PageKatagori extends State<PageKatagori> {
-  final _scaffoldKey = new GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(

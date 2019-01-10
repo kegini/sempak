@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'page/home/page_home.dart';
-import 'page/katagori/page_katagori.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,7 +11,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: PageKatagori(title: 'SemPAK'),
+      home: MyHomePage(title: 'SemPAK'),
     );
   }
 }
