@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '_logic_home.dart';
 
 class MyHomePage extends StatefulWidget {
   final String title;
@@ -65,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
               icon: Icon(Icons.add_circle),
               color: Colors.white,
               onPressed: () {
-                tambah();
+                LogicHome().tambah();
               },
             ),
             Text(
@@ -81,20 +82,9 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.green,
         foregroundColor: Colors.white,
         onPressed: () {
-          acak();
+          LogicHome().acak();
         },
       ),
     );
-  }
-
-  //////////////////////////////////////////////////////
-  /// Bisnis Logic
-  //////////////////////////////////////////////////////
-  void acak() {
-    print("Lakukan Acak");
-  }
-
-  void tambah() {
-    print("Lakukan Tambah");
   }
 }
