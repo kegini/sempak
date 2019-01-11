@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '_logic_home.dart';
+import '../katagori/page_katagori.dart';
+import '../item/page_detail_item.dart';
 
 class MyHomePage extends StatefulWidget {
   final String title;
@@ -19,7 +21,13 @@ class _MyHomePageState extends State<MyHomePage> {
     ////////////////////////////////////////////////////
     /// Katagori Section
     ////////////////////////////////////////////////////
-    Widget katagoriSection = Container(
+    Widget katagoriSection = FlatButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => PageKatagori()),
+        );
+      },
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,
@@ -71,10 +79,21 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.max,
         children: <Widget>[
-          Image(
-            width: 250,
-            height: 250,
-            image: AssetImage("images/logo.png"),
+          FlatButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => PageDetailItem(
+                          title: "Detail Item",
+                        )),
+              );
+            },
+            child: Image(
+              width: 250,
+              height: 250,
+              image: AssetImage("images/logo.png"),
+            ),
           ),
           Container(
             margin: EdgeInsets.only(top: 8),

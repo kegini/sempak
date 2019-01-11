@@ -43,7 +43,7 @@ class AfterSplash extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: PageDetailItem(title: 'SemPAK'),
+      home: MyHomePage(title: 'SemPAK'),
     );
   }
 }

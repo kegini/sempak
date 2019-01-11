@@ -15,7 +15,7 @@ class _PageItemListState extends State<PageDetailItem> {
     return CustomScrollView(
       slivers: <Widget>[
         SliverAppBar(
-          title: Text('SliverAppBar'),
+          title: Text(widget.title),
           backgroundColor: Colors.green,
           expandedHeight: 200.0,
           flexibleSpace: FlexibleSpaceBar(
