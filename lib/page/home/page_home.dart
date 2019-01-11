@@ -26,18 +26,71 @@ class _MyHomePageState extends State<MyHomePage> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Card(
+              color: Colors.green,
               margin: EdgeInsets.all(8),
               child: Container(
-                margin: EdgeInsets.all(8),
-                child: Text("data"),
-              ))
+                  margin: EdgeInsets.all(8),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: <Widget>[
+                      Image(
+                        width: 50,
+                        height: 50,
+                        image: AssetImage("images/logo.png"),
+                      ),
+                      Container(
+                        margin: EdgeInsets.all(8),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
+                          children: <Widget>[
+                            Text(
+                              "Jajanan Depan Komplek",
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                              textAlign: TextAlign.start,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  )))
         ],
       ),
     );
     ////////////////////////////////////////////////////
     /// Katagori Section
     ////////////////////////////////////////////////////
-    Widget hasilSection = Container();
+    Widget hasilSection = Container(
+      margin: EdgeInsets.only(top: 80),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.max,
+        children: <Widget>[
+          Image(
+            width: 250,
+            height: 250,
+            image: AssetImage("images/logo.png"),
+          ),
+          Container(
+            margin: EdgeInsets.only(top: 8),
+            child: Text(
+              "Nasi Goreng",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Colors.green,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ],
+      ),
+    );
 
     ////////////////////////////////////////////////////
     /// Scaffold
