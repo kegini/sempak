@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'page/home/page_home.dart';
 import 'package:splashscreen/splashscreen.dart';
-import 'page/item/page_detail_item.dart';
 
 void main() {
   runApp(new MaterialApp(

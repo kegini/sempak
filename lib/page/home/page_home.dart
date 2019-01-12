@@ -25,7 +25,7 @@ class _MyHomePageState extends State<MyHomePage> {
       onPressed: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => PageKatagori()),
+          MaterialPageRoute(builder: (context) => PageKatagoriList()),
         );
       },
       child: Column(
