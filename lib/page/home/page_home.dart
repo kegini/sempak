@@ -116,8 +116,15 @@ class _MyHomePageState extends State<MyHomePage> {
     ////////////////////////////////////////////////////
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
-      ),
+          title: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Text(
+            widget.title,
+            textAlign: TextAlign.center,
+          ),
+        ],
+      )),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,

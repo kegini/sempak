@@ -12,25 +12,28 @@ class PageDetailItem extends StatefulWidget {
 class _PageItemListState extends State<PageDetailItem> {
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: <Widget>[
-        SliverAppBar(
-          title: Text(widget.title),
-          backgroundColor: Colors.green,
-          expandedHeight: 200.0,
-          flexibleSpace: FlexibleSpaceBar(
-            background: Image.asset('images/forest.jpg', fit: BoxFit.cover),
+    return Container(
+      child: new Stack(
+        children: <Widget>[
+          new Container(
+            child: new Image.asset('images/forest.jpg'),
+            color: Colors.lightGreen,
           ),
-        ),
-        SliverFixedExtentList(
-          itemExtent: 150.0,
-          delegate: SliverChildListDelegate(
-            [
-              Container(color: Colors.red),
-            ],
-          ),
-        ),
-      ],
+          new Scaffold(
+              appBar: new AppBar(
+                title: new Text('Hello'),
+                backgroundColor: Colors.transparent,
+                elevation: 0.0,
+              ),
+              backgroundColor: Colors.transparent,
+              body: new Container(
+                color: Colors.white,
+                child: new Center(
+                  child: new Text('Hello how are you?'),
+                ),
+              ))
+        ],
+      ),
     );
   }
 }

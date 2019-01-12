@@ -22,7 +22,10 @@ class _MyAppState extends State<MyApp> {
         navigateAfterSeconds: new AfterSplash(),
         title: new Text(
           'SemPAK',
-          style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+          style: new TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 20.0,
+          ),
         ),
         image: new Image(
           image: AssetImage("images/logo.png"),
